@@ -1,4 +1,4 @@
-from calculadora.oo.framework import CalculadoraInfixa, Calculadora
+from calculadora.oo.framework import Calculadora, Operacao, CalculadoraInfixa
 
 
 class CalculadoraPrefixa(Calculadora):
@@ -11,6 +11,12 @@ class CalculadoraPrefixa(Calculadora):
         return sinal, p1, p2
 
 
-calculadora = CalculadoraPrefixa()
+class Divisao(Operacao):
+    def calcular(self, p1, p2):
+        return p1 / p2
+
+
+calculadora = CalculadoraInfixa()
+calculadora.adicionar_operacao('/', Divisao())
 
 print(calculadora.efetuar_operacao())

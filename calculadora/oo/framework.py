@@ -37,7 +37,10 @@ class CalculadoraInfixa(Calculadora):
     def obter_inputs(self):
         p1 = input('Digite o primeiro número: ')
         p1 = float(p1)
-        sinal = input('Digite o sinal da operação (*, + ou -): ')
+        sinal = input(
+            'Digite o sinal da operação {}: '.format(
+                ', '.join(self._operacoes.keys()))
+        )
         p2 = input('Digite o segundo número: ')
         p2 = float(p2)
         return sinal, p1, p2
