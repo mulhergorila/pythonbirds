@@ -7,8 +7,7 @@ class Poligono:
         self._Poligono__privado = True
 
     def calcular_area(self):
-        print(id(self))
-        return 8
+        raise NotImplementedError('Vc deve implementar esse método')
 
 
 if __name__ == '__main__':
@@ -47,6 +46,6 @@ if __name__ == '__main__':
 
     for nome_propriedade in dir(p1):
         valor_propriedade = getattr(p1, nome_propriedade)
-        if not callable(valor_propriedade) and not nome_propriedade.startswith('_'):
+        if not callable(valor_propriedade) and not nome_propriedade.startswith(
+                '_'):
             print(nome_propriedade, valor_propriedade)
-
