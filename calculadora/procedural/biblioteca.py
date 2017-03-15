@@ -21,4 +21,6 @@ def _calcular(sinal, p1, p2):
         return p1 + p2
     elif sinal == '-':
         return p1 - p2
+    elif sinal == '*':
+        return p1 * p2
     raise Exception('Operação não suportada')
