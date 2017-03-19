@@ -15,8 +15,14 @@ class Divisao(Operacao):
     def calcular(self, p1, p2):
         return p1 / p2
 
+    
+class Multiplicacao(Operacao):
+    def calcular(self, p1, p2):
+        return p1 * p2
+
 
 calculadora = CalculadoraInfixa()
 calculadora.adicionar_operacao('/', Divisao())
+calculadora.adicionar_operacao('*', Multiplicacao())
 
 print(calculadora.efetuar_operacao())
